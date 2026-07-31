@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website MC Huy Thịnh
 
-## Getting Started
+Website cá nhân cho MC / Host Livestream / Voice Talent **Huy Thịnh** — xây dựng bằng [Next.js](https://nextjs.org) (App Router, TypeScript, Tailwind CSS v4), xuất ra static HTML để deploy trên bất kỳ gói hosting nào của Hostinger.
 
-First, run the development server:
+## Công nghệ sử dụng
+
+- **Next.js 16** (App Router) + TypeScript
+- **Tailwind CSS v4** — design tokens tuỳ chỉnh (be sáng + đen + vàng đồng, font Playfair Display + Inter)
+- **lucide-react** cho icon
+- Xuất **static export** (`output: "export"`) — chạy được trên mọi gói hosting Hostinger, không cần server Node.js chạy nền
+- Form liên hệ gửi qua [FormSubmit](https://formsubmit.co) (không cần backend riêng)
+
+## Chạy thử ở máy local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Chỉnh sửa nội dung
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Toàn bộ thông tin thật (tên, tiểu sử, số điện thoại, email, danh sách dự án, đối tác...) nằm trong **một file duy nhất**:
 
-## Learn More
+```
+src/lib/data.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+Sửa nội dung ở đó là cập nhật toàn bộ trang — không cần đụng vào code giao diện. Khi có ảnh/video thật, thay thế component `PortraitPlaceholder` (`src/components/PortraitPlaceholder.tsx`) bằng `next/image` trỏ tới ảnh thật trong thư mục `public/`, và cập nhật khối ảnh trong `src/components/sections/Gallery.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build ra file tĩnh
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Kết quả nằm trong thư mục `out/` — đây chính là toàn bộ website dạng HTML/CSS/JS tĩnh để upload lên hosting.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Xem trước bản build tĩnh: `npm run preview` (mở `http://localhost:3000` bằng server tĩnh).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Đưa code lên GitHub
+
+Repo Git đã được khởi tạo sẵn và có commit đầu tiên. Các bước còn lại cần **bạn tự thực hiện** (Claude không thể đăng nhập GitHub thay bạn):
+
+1. Tạo repo mới trên GitHub (ví dụ `mc-huy-thinh-website`), để **trống**, không tick "Initialize with README".
+2. Trong thư mục dự án, chạy:
+
+```bash
+git remote add origin https://github.com/<username>/mc-huy-thinh-website.git
+git branch -M main
+git push -u origin main
+```
+
+Từ lần sau chỉ cần `git add`, `git commit`, `git push`.
+
+## Deploy lên Hostinger
+
+Xem hướng dẫn chi tiết trong [DEPLOY.md](./DEPLOY.md).
+
+## Form liên hệ
+
+Form ở mục "Liên hệ hợp tác" gửi thẳng tới email `lehuythinh456@gmail.com` qua dịch vụ FormSubmit — không cần server riêng nên hoạt động được trên mọi gói hosting Hostinger. **Lần đầu tiên** có người gửi form thật, FormSubmit sẽ gửi một email xác nhận (activate) tới hộp thư đó — bạn cần mở email và bấm xác nhận một lần duy nhất thì các lần gửi sau mới vào thẳng hộp thư.
+
+## Cấu hình tên miền cho SEO
+
+Trước khi build để deploy, tạo file `.env.local` (copy từ `.env.example`) và điền tên miền thật:
+
+```
+NEXT_PUBLIC_SITE_URL=https://ten-mien-that-cua-ban.com
+```
+
+Giá trị này dùng cho `sitemap.xml`, `robots.txt` và thẻ Open Graph/Twitter khi chia sẻ link lên mạng xã hội.

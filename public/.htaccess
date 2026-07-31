@@ -1,0 +1,33 @@
+# Huy Thịnh website — cấu hình Apache cho Hostinger (static export)
+
+# Trang lỗi 404 tuỳ chỉnh
+ErrorDocument 404 /404.html
+
+# Đảm bảo file ảnh OG (không có phần mở rộng) trả về đúng Content-Type
+<IfModule mod_mime.c>
+  <Files "opengraph-image">
+    ForceType image/png
+  </Files>
+</IfModule>
+
+# Nén GZIP để tải trang nhanh hơn
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache trình duyệt cho tài nguyên tĩnh đã được đánh hash
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+</IfModule>
+
+# Bắt buộc HTTPS (bỏ comment sau khi đã bật SSL miễn phí trên Hostinger)
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
