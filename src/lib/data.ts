@@ -93,6 +93,7 @@ export type PortfolioItem = {
   category: PortfolioCategory;
   title: string;
   meta?: string;
+  image?: string;
 };
 
 export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
@@ -105,12 +106,65 @@ export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
 export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
+    title: "Unilever x FIFA World Cup 2026™",
+    meta: "Người dẫn chương trình",
+    image: "/images/portfolio/su-kien-unilever-fifa.jpg",
+  },
+  {
+    category: "su-kien",
+    title: "Gala Chào Đón Tân Sinh Viên NTTU 2025 - 2026",
+    meta: "MC sự kiện · NTTU Studio",
+    image: "/images/portfolio/su-kien-nttu-gala.jpg",
+  },
+  {
+    category: "su-kien",
+    title: "Khai giảng Đại học Nguyễn Tất Thành",
+    meta: "MC sự kiện · 5.000 khán giả",
+    image: "/images/portfolio/su-kien-khai-giang-nttu.jpg",
+  },
+  {
+    category: "su-kien",
+    title: "Fashion Show \"Sắc Hương Di Sản\"",
+    meta: "MC sự kiện",
+    image: "/images/portfolio/su-kien-fashion-show.jpg",
+  },
+  {
+    category: "su-kien",
+    title: "Year End Party — Shinhan Group Beauty Legends",
+    meta: "MC sự kiện",
+    image: "/images/portfolio/su-kien-year-end-shinhan.jpg",
+  },
+  {
+    category: "su-kien",
+    title: "Gameshow truyền hình \"Siêu Thị Voucher\"",
+    meta: "MC truyền hình",
+    image: "/images/portfolio/su-kien-sieu-thi-voucher.jpg",
+  },
+  {
+    category: "su-kien",
+    title: "Talkshow \"Ra Chơi Hóng Chuyện Nghề\" — HUTECH",
+    meta: "MC talkshow",
+    image: "/images/portfolio/su-kien-talkshow-hutech.jpg",
+  },
+  {
+    category: "su-kien",
     title: "Hội nghị Đối thoại Doanh nghiệp Thương mại điện tử TP. Hồ Chí Minh",
     meta: "MC sự kiện",
   },
   { category: "su-kien", title: "Miss Hutech 2018", meta: "MC sự kiện" },
   { category: "su-kien", title: "Lazada Run 2023", meta: "MC sự kiện" },
-  { category: "su-kien", title: "Gala âm nhạc NTTU", meta: "MC sự kiện" },
+  {
+    category: "livestream",
+    title: "Livestream ASUS Singapore",
+    meta: "Host Livestream",
+    image: "/images/portfolio/livestream-asus-singapore.jpg",
+  },
+  {
+    category: "livestream",
+    title: "Livestream Epson EcoTank Store",
+    meta: "Host Livestream",
+    image: "/images/portfolio/livestream-epson-ecotank.jpg",
+  },
   { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream" },
   { category: "livestream", title: "Host Livestream bán hàng — Shopee", meta: "Host Livestream" },
   { category: "livestream", title: "Host Livestream bán hàng — TikTok Shop", meta: "Host Livestream" },
@@ -121,8 +175,15 @@ export const portfolio: PortfolioItem[] = [
   { category: "voice-talent", title: "Đông Á Bank", meta: "Voice Talent" },
   {
     category: "dao-tao",
-    title: "Đào tạo Livestream bán hàng, Giao tiếp & Thuyết trình",
-    meta: "Trường Đại học, doanh nghiệp, tập đoàn",
+    title: "Giảng viên Giọng nói — Thalic Voice",
+    meta: "Đào tạo giọng nói & giao tiếp",
+    image: "/images/portfolio/daotao-giang-vien-thalic.jpg",
+  },
+  {
+    category: "dao-tao",
+    title: "Coach kỹ năng Livestream thu hút triệu đơn — UEF",
+    meta: "Đào tạo livestream bán hàng",
+    image: "/images/portfolio/daotao-coach-livestream-uef.jpg",
   },
   {
     category: "dao-tao",

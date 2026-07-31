@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Container from "../Container";
 import SectionHeading from "../SectionHeading";
@@ -55,26 +56,39 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((item) => (
             <div
               key={item.title}
-              className="group flex flex-col justify-between gap-8 rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-foreground/5"
             >
-              <div className="flex items-start justify-between gap-3">
-                <span className="section-label">
-                  {portfolioCategories.find((c) => c.id === item.category)?.label}
-                </span>
-                <ArrowUpRight
-                  className="size-4 text-foreground-soft transition-colors duration-200 group-hover:text-accent"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <h3 className="font-display text-lg leading-snug text-foreground">{item.title}</h3>
-                {item.meta ? (
-                  <span className="text-sm text-foreground-soft">{item.meta}</span>
-                ) : null}
+              {item.image ? (
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 1024px) 32vw, (min-width: 640px) 45vw, 90vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              ) : null}
+              <div className="flex flex-1 flex-col justify-between gap-8 p-7">
+                <div className="flex items-start justify-between gap-3">
+                  <span className="section-label">
+                    {portfolioCategories.find((c) => c.id === item.category)?.label}
+                  </span>
+                  <ArrowUpRight
+                    className="size-4 shrink-0 text-foreground-soft transition-colors duration-200 group-hover:text-accent"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <h3 className="font-display text-lg leading-snug text-foreground">{item.title}</h3>
+                  {item.meta ? (
+                    <span className="text-sm text-foreground-soft">{item.meta}</span>
+                  ) : null}
+                </div>
               </div>
             </div>
           ))}

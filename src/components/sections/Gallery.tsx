@@ -1,13 +1,48 @@
-import { ImageIcon, Video } from "lucide-react";
+import Image from "next/image";
 import Container from "../Container";
 import SectionHeading from "../SectionHeading";
 
-const placeholders = [
-  { label: "Sự kiện & Truyền hình", icon: ImageIcon, span: "sm:col-span-2 sm:row-span-2" },
-  { label: "Host Livestream", icon: Video, span: "" },
-  { label: "Voice Talent", icon: ImageIcon, span: "" },
-  { label: "Đào tạo", icon: ImageIcon, span: "" },
-  { label: "Hậu trường", icon: Video, span: "" },
+const photos = [
+  {
+    src: "/images/portfolio/su-kien-khai-giang-nttu.jpg",
+    alt: "MC Huy Thịnh dẫn chương trình Khai giảng Đại học Nguyễn Tất Thành",
+    span: "sm:col-span-2 sm:row-span-2",
+  },
+  {
+    src: "/images/portfolio/su-kien-sieu-thi-voucher.jpg",
+    alt: "MC Huy Thịnh trong gameshow truyền hình Siêu Thị Voucher",
+    span: "",
+  },
+  {
+    src: "/images/portfolio/daotao-giang-vien-thalic.jpg",
+    alt: "Huy Thịnh giảng dạy tại Thalic Voice",
+    span: "",
+  },
+  {
+    src: "/images/portfolio/livestream-epson-ecotank.jpg",
+    alt: "Host Livestream sản phẩm Epson EcoTank",
+    span: "",
+  },
+  {
+    src: "/images/portfolio/su-kien-fashion-show.jpg",
+    alt: "MC Huy Thịnh tại Fashion Show Sắc Hương Di Sản",
+    span: "",
+  },
+  {
+    src: "/images/portrait/gallery-lifestyle.jpg",
+    alt: "Huy Thịnh — hậu trường",
+    span: "",
+  },
+  {
+    src: "/images/portfolio/su-kien-year-end-shinhan.jpg",
+    alt: "MC Huy Thịnh tại Year End Party Shinhan Group",
+    span: "",
+  },
+  {
+    src: "/images/portfolio/su-kien-talkshow-hutech.jpg",
+    alt: "MC Huy Thịnh trong talkshow Ra Chơi Hóng Chuyện Nghề tại HUTECH",
+    span: "",
+  },
 ];
 
 export default function Gallery() {
@@ -17,19 +52,22 @@ export default function Gallery() {
         <SectionHeading
           eyebrow="Thư viện"
           title="Hình ảnh & video"
-          description="Thư viện hình ảnh và video sẽ sớm được cập nhật với các khoảnh khắc thực tế từ chương trình."
+          description="Một số khoảnh khắc thực tế từ các chương trình, phiên livestream và lớp đào tạo."
         />
 
         <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[10rem] gap-4">
-          {placeholders.map((item) => (
+          {photos.map((photo) => (
             <div
-              key={item.label}
-              className={`flex flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-border bg-background-alt text-foreground-soft/70 ${item.span}`}
+              key={photo.src}
+              className={`relative overflow-hidden rounded-2xl border border-border ${photo.span}`}
             >
-              <item.icon className="size-6" aria-hidden="true" />
-              <span className="text-xs font-medium uppercase tracking-wide text-center px-3">
-                {item.label}
-              </span>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(min-width: 640px) 25vw, 50vw"
+                className="object-cover transition-transform duration-500 hover:scale-105"
+              />
             </div>
           ))}
         </div>

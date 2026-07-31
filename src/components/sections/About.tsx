@@ -1,17 +1,22 @@
+import Image from "next/image";
 import { Award } from "lucide-react";
 import Container from "../Container";
 import SectionHeading from "../SectionHeading";
-import PortraitPlaceholder from "../PortraitPlaceholder";
 import { achievements, bio } from "@/lib/data";
 
 export default function About() {
   return (
     <section id="gioi-thieu" className="py-20 sm:py-28">
       <Container className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-        <PortraitPlaceholder
-          className="aspect-[4/5] w-full max-w-md justify-self-center lg:sticky lg:top-28 lg:max-w-none lg:justify-self-start"
-          label="Ảnh chân dung sẽ được cập nhật"
-        />
+        <div className="relative aspect-[4/5] w-full max-w-md justify-self-center overflow-hidden rounded-[1.75rem] border border-border lg:sticky lg:top-28 lg:max-w-none lg:justify-self-start">
+          <Image
+            src="/images/portrait/about.jpg"
+            alt="Chân dung Huy Thịnh"
+            fill
+            sizes="(min-width: 1024px) 32vw, (min-width: 640px) 60vw, 90vw"
+            className="object-cover"
+          />
+        </div>
 
         <div className="flex flex-col gap-10">
           <SectionHeading eyebrow="Giới thiệu" title={bio.heading} />
