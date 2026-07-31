@@ -93,7 +93,10 @@ export type PortfolioItem = {
   category: PortfolioCategory;
   title: string;
   meta?: string;
+  /** Cover photo shown on the grid card. */
   image?: string;
+  /** Full set of photos for this event, shown in the lightbox when the card is clicked. Falls back to [image] when omitted. */
+  images?: string[];
 };
 
 export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
@@ -109,6 +112,10 @@ export const portfolio: PortfolioItem[] = [
     title: "Unilever x FIFA World Cup 2026™",
     meta: "Người dẫn chương trình",
     image: "/images/portfolio/su-kien-unilever-fifa.jpg",
+    images: [
+      "/images/portfolio/su-kien-unilever-fifa.jpg",
+      "/images/portfolio/su-kien-unilever-fifa-2.jpg",
+    ],
   },
   {
     category: "su-kien",
@@ -121,30 +128,55 @@ export const portfolio: PortfolioItem[] = [
     title: "Khai giảng Đại học Nguyễn Tất Thành",
     meta: "MC sự kiện · 5.000 khán giả",
     image: "/images/portfolio/su-kien-khai-giang-nttu.jpg",
+    images: [
+      "/images/portfolio/su-kien-khai-giang-nttu.jpg",
+      "/images/portfolio/su-kien-khai-giang-nttu-2.jpg",
+      "/images/portfolio/su-kien-khai-giang-nttu-3.jpg",
+    ],
   },
   {
     category: "su-kien",
     title: "Fashion Show \"Sắc Hương Di Sản\"",
     meta: "MC sự kiện",
     image: "/images/portfolio/su-kien-fashion-show.jpg",
+    images: [
+      "/images/portfolio/su-kien-fashion-show.jpg",
+      "/images/portfolio/su-kien-fashion-show-2.jpg",
+      "/images/portfolio/su-kien-fashion-show-3.jpg",
+      "/images/portfolio/su-kien-fashion-show-4.jpg",
+    ],
   },
   {
     category: "su-kien",
     title: "Year End Party — Shinhan Group Beauty Legends",
     meta: "MC sự kiện",
     image: "/images/portfolio/su-kien-year-end-shinhan.jpg",
+    images: [
+      "/images/portfolio/su-kien-year-end-shinhan.jpg",
+      "/images/portfolio/su-kien-year-end-shinhan-2.jpg",
+      "/images/portfolio/su-kien-year-end-shinhan-3.jpg",
+      "/images/portfolio/su-kien-year-end-shinhan-4.jpg",
+    ],
   },
   {
     category: "su-kien",
     title: "Gameshow truyền hình \"Siêu Thị Voucher\"",
     meta: "MC truyền hình",
     image: "/images/portfolio/su-kien-sieu-thi-voucher.jpg",
+    images: [
+      "/images/portfolio/su-kien-sieu-thi-voucher.jpg",
+      "/images/portfolio/su-kien-sieu-thi-voucher-2.jpg",
+    ],
   },
   {
     category: "su-kien",
     title: "Talkshow \"Ra Chơi Hóng Chuyện Nghề\" — HUTECH",
     meta: "MC talkshow",
     image: "/images/portfolio/su-kien-talkshow-hutech.jpg",
+    images: [
+      "/images/portfolio/su-kien-talkshow-hutech.jpg",
+      "/images/portfolio/su-kien-talkshow-hutech-2.jpg",
+    ],
   },
   {
     category: "su-kien",
@@ -158,12 +190,21 @@ export const portfolio: PortfolioItem[] = [
     title: "Livestream ASUS Singapore",
     meta: "Host Livestream",
     image: "/images/portfolio/livestream-asus-singapore.jpg",
+    images: [
+      "/images/portfolio/livestream-asus-singapore.jpg",
+      "/images/portfolio/livestream-asus-singapore-2.jpg",
+    ],
   },
   {
     category: "livestream",
     title: "Livestream Epson EcoTank Store",
     meta: "Host Livestream",
     image: "/images/portfolio/livestream-epson-ecotank.jpg",
+    images: [
+      "/images/portfolio/livestream-epson-ecotank.jpg",
+      "/images/portfolio/livestream-epson-ecotank-2.jpg",
+      "/images/portfolio/livestream-epson-ecotank-3.jpg",
+    ],
   },
   { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream" },
   { category: "livestream", title: "Host Livestream bán hàng — Shopee", meta: "Host Livestream" },
@@ -178,12 +219,21 @@ export const portfolio: PortfolioItem[] = [
     title: "Giảng viên Giọng nói — Thalic Voice",
     meta: "Đào tạo giọng nói & giao tiếp",
     image: "/images/portfolio/daotao-giang-vien-thalic.jpg",
+    images: [
+      "/images/portfolio/daotao-giang-vien-thalic.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-2.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-3.jpg",
+    ],
   },
   {
     category: "dao-tao",
     title: "Coach kỹ năng Livestream thu hút triệu đơn — UEF",
     meta: "Đào tạo livestream bán hàng",
     image: "/images/portfolio/daotao-coach-livestream-uef.jpg",
+    images: [
+      "/images/portfolio/daotao-coach-livestream-uef.jpg",
+      "/images/portfolio/daotao-coach-livestream-uef-2.jpg",
+    ],
   },
   {
     category: "dao-tao",
