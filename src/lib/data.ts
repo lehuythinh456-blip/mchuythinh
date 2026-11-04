@@ -254,6 +254,10 @@ export const partners = [
   "VOV3 - The One Radio",
 ];
 
+// Khi có logo chính thức: bỏ file vào public/images/partners/ rồi khai báo ở đây,
+// ví dụ: "Zalo": "/images/partners/zalo.png". Đối tác chưa có logo sẽ hiện bằng chữ.
+export const partnerLogos: Record<string, string> = {};
+
 export const navLinks = [
   { href: "#gioi-thieu", label: "Giới thiệu" },
   { href: "#linh-vuc", label: "Lĩnh vực" },
