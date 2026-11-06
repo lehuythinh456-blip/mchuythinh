@@ -107,6 +107,9 @@ export default function Portfolio() {
                     {item.meta ? (
                       <span className="text-sm text-foreground-soft">{item.meta}</span>
                     ) : null}
+                    {item.description ? (
+                      <p className="mt-2 text-sm leading-relaxed text-foreground-soft/90">{item.description}</p>
+                    ) : null}
                   </div>
                 </div>
               </CardTag>

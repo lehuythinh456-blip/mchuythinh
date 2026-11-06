@@ -93,6 +93,8 @@ export type PortfolioItem = {
   category: PortfolioCategory;
   title: string;
   meta?: string;
+  /** Giới thiệu sơ về chương trình, hiển thị dưới tên trên thẻ dự án. */
+  description?: string;
   /** Cover photo shown on the grid card. */
   image?: string;
   /** Full set of photos for this event, shown in the lightbox when the card is clicked. Falls back to [image] when omitted. */
@@ -110,6 +112,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
     title: "Unilever x FIFA World Cup 2026™",
+    description:
+      "Sự kiện thương hiệu của Unilever gắn với mùa FIFA World Cup 2026™, Thịnh đảm nhận vai trò người dẫn chương trình.",
     meta: "Người dẫn chương trình",
     image: "/images/portfolio/su-kien-unilever-fifa.jpg",
     images: [
@@ -120,12 +124,16 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
     title: "Gala Chào Đón Tân Sinh Viên NTTU 2025 - 2026",
+    description:
+      "Đêm gala âm nhạc chào đón tân sinh viên năm học 2025 – 2026 của Đại học Nguyễn Tất Thành, thực hiện cùng NTTU Studio.",
     meta: "MC sự kiện · NTTU Studio",
     image: "/images/portfolio/su-kien-nttu-gala.jpg",
   },
   {
     category: "su-kien",
     title: "Khai giảng Đại học Nguyễn Tất Thành",
+    description:
+      "Lễ khai giảng của Đại học Nguyễn Tất Thành với khoảng 5.000 khán giả tham dự.",
     meta: "MC sự kiện · 5.000 khán giả",
     image: "/images/portfolio/su-kien-khai-giang-nttu.jpg",
     images: [
@@ -137,6 +145,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
     title: "Fashion Show \"Sắc Hương Di Sản\"",
+    description:
+      "Chương trình trình diễn thời trang \"Sắc Hương Di Sản\", Thịnh dẫn dắt toàn bộ chương trình.",
     meta: "MC sự kiện",
     image: "/images/portfolio/su-kien-fashion-show.jpg",
     images: [
@@ -149,6 +159,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
     title: "Year End Party — Shinhan Group Beauty Legends",
+    description:
+      "Tiệc tri ân cuối năm của Shinhan Group Beauty Legends với phần dẫn dắt chương trình và kết nối nghệ sĩ.",
     meta: "MC sự kiện",
     image: "/images/portfolio/su-kien-year-end-shinhan.jpg",
     images: [
@@ -161,6 +173,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
     title: "Gameshow truyền hình \"Siêu Thị Voucher\"",
+    description:
+      "Gameshow truyền hình \"Siêu Thị Voucher\" với các phần chơi tương tác và quà tặng voucher cho người chơi.",
     meta: "MC truyền hình",
     image: "/images/portfolio/su-kien-sieu-thi-voucher.jpg",
     images: [
@@ -171,12 +185,50 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "su-kien",
     title: "Talkshow \"Ra Chơi Hóng Chuyện Nghề\" — HUTECH",
+    description:
+      "Talkshow hướng nghiệp \"Ra Chơi Hóng Chuyện Nghề\" tại HUTECH, trò chuyện cùng khách mời về các ngành nghề.",
     meta: "MC talkshow",
     image: "/images/portfolio/su-kien-talkshow-hutech.jpg",
     images: [
       "/images/portfolio/su-kien-talkshow-hutech.jpg",
       "/images/portfolio/su-kien-talkshow-hutech-2.jpg",
     ],
+  },
+  {
+    category: "su-kien",
+    title: "HTV — Lên xe đi người đẹp",
+    meta: "MC truyền hình",
+    description: "Chương trình truyền hình phát sóng trên HTV, Thịnh tham gia dẫn dắt.",
+  },
+  {
+    category: "su-kien",
+    title: "CALI CLUB — Vui chơi Hàn Quốc",
+    meta: "MC sự kiện",
+    description: "Sự kiện của CALI CLUB với chủ đề vui chơi phong cách Hàn Quốc.",
+  },
+  {
+    category: "su-kien",
+    title: "Fan Screening Huy Ka — Võ Điền Gia Huy",
+    meta: "MC sự kiện",
+    description: "Buổi fan screening dành cho cộng đồng người hâm mộ Võ Điền Gia Huy (Huy Ka).",
+  },
+  {
+    category: "su-kien",
+    title: "Hutech Next Gen Creative",
+    meta: "MC sự kiện",
+    description: "Chương trình Next Gen Creative dành cho sinh viên Đại học HUTECH.",
+  },
+  {
+    category: "su-kien",
+    title: "Đạt Vĩnh Tiến — Kỷ niệm 20 năm",
+    meta: "MC sự kiện",
+    description: "Chương trình kỷ niệm 20 năm của Đạt Vĩnh Tiến.",
+  },
+  {
+    category: "su-kien",
+    title: "Highland Coffee",
+    meta: "MC sự kiện",
+    description: "Chương trình hợp tác cùng Highland Coffee.",
   },
   {
     category: "su-kien",
@@ -188,6 +240,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "livestream",
     title: "Livestream ASUS Singapore",
+    description:
+      "Phiên livestream giới thiệu sản phẩm ASUS trong chuyến làm việc tại Singapore.",
     meta: "Host Livestream",
     image: "/images/portfolio/livestream-asus-singapore.jpg",
     images: [
@@ -195,18 +249,6 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/livestream-asus-singapore-2.jpg",
     ],
   },
-  {
-    category: "livestream",
-    title: "Livestream Epson EcoTank Store",
-    meta: "Host Livestream",
-    image: "/images/portfolio/livestream-epson-ecotank.jpg",
-    images: [
-      "/images/portfolio/livestream-epson-ecotank.jpg",
-      "/images/portfolio/livestream-epson-ecotank-2.jpg",
-      "/images/portfolio/livestream-epson-ecotank-3.jpg",
-    ],
-  },
-  { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream" },
   { category: "livestream", title: "Host Livestream bán hàng — Shopee", meta: "Host Livestream" },
   { category: "livestream", title: "Host Livestream bán hàng — TikTok Shop", meta: "Host Livestream" },
   { category: "voice-talent", title: "Sony Vietnam", meta: "Voice Talent" },
@@ -217,6 +259,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "dao-tao",
     title: "Giảng viên Giọng nói — Thalic Voice",
+    description:
+      "Giảng dạy kỹ năng giọng nói và giao tiếp tại Thalic Voice.",
     meta: "Đào tạo giọng nói & giao tiếp",
     image: "/images/portfolio/daotao-giang-vien-thalic.jpg",
     images: [
@@ -228,6 +272,8 @@ export const portfolio: PortfolioItem[] = [
   {
     category: "dao-tao",
     title: "Coach kỹ năng Livestream thu hút triệu đơn — UEF",
+    description:
+      "Buổi đào tạo kỹ năng livestream bán hàng dành cho sinh viên Đại học Kinh tế – Tài chính (UEF).",
     meta: "Đào tạo livestream bán hàng",
     image: "/images/portfolio/daotao-coach-livestream-uef.jpg",
     images: [
@@ -239,6 +285,26 @@ export const portfolio: PortfolioItem[] = [
     category: "dao-tao",
     title: "Biên tập kịch bản Radio",
     meta: "Trường Đại học, doanh nghiệp, tập đoàn",
+  },
+  {
+    category: "livestream",
+    title: "Livestream Epson EcoTank Store",
+    description:
+      "Phiên livestream giới thiệu dòng máy in Epson EcoTank tại cửa hàng.",
+    meta: "Host Livestream",
+    image: "/images/portfolio/livestream-epson-ecotank.jpg",
+    images: [
+      "/images/portfolio/livestream-epson-ecotank.jpg",
+      "/images/portfolio/livestream-epson-ecotank-2.jpg",
+      "/images/portfolio/livestream-epson-ecotank-3.jpg",
+    ],
+  },
+  { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream", description: "Dẫn dắt các phiên livestream bán hàng trên Lazada, tối ưu tương tác và chốt đơn." },
+  {
+    category: "livestream",
+    title: "Lazada Siêu Live Công Nghệ — Misthy x Chika MVK",
+    meta: "Host Livestream",
+    description: "Siêu live công nghệ trên Lazada, Thịnh dẫn dắt khung giờ 20h – 22h cùng khách mời KOL.",
   },
 ];
 
