@@ -99,6 +99,18 @@ export type PortfolioItem = {
   image?: string;
   /** Full set of photos for this event, shown in the lightbox when the card is clicked. Falls back to [image] when omitted. */
   images?: string[];
+  /** Video / file voice đã lồng tiếng cho thương hiệu; bấm vào thẻ sẽ mở trình phát. */
+  media?: VoiceMedia[];
+  /** Ẩn khỏi tab "Tất cả", chỉ hiện khi khách mở đúng thư mục (tab) của mục đó. */
+  hideInAll?: boolean;
+};
+
+export type VoiceMedia = {
+  kind: "video" | "audio";
+  /** ID file trên Google Drive (file cần chia sẻ "Bất kỳ ai có đường liên kết"). */
+  driveId: string;
+  /** Tên hiển thị khi một thương hiệu có nhiều file. */
+  label?: string;
 };
 
 export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
@@ -119,6 +131,73 @@ export const portfolio: PortfolioItem[] = [
     images: [
       "/images/portfolio/su-kien-unilever-fifa.jpg",
       "/images/portfolio/su-kien-unilever-fifa-2.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "CALI CLUB — Vui chơi Hàn Quốc",
+    meta: "MC sự kiện",
+    description: "Sự kiện trò chơi tương tác của CALI CLUB Vietnam với chủ đề Step into the Game World.",
+    image: "/images/portfolio/su-kien-cali-club.jpg",
+    images: [
+      "/images/portfolio/su-kien-cali-club.jpg",
+      "/images/portfolio/su-kien-cali-club-2.jpg",
+      "/images/portfolio/su-kien-cali-club-3.jpg",
+      "/images/portfolio/su-kien-cali-club-4.jpg",
+      "/images/portfolio/su-kien-cali-club-5.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Hutech Next Gen Creative",
+    meta: "MC sự kiện",
+    description: "Vòng chung kết cuộc thi The Next Gen Creators – Mùa 3 tại HUTECH, tháng 4/2026.",
+    image: "/images/portfolio/su-kien-hutech-next-gen.jpg",
+    images: [
+      "/images/portfolio/su-kien-hutech-next-gen.jpg",
+      "/images/portfolio/su-kien-hutech-next-gen-2.jpg",
+      "/images/portfolio/su-kien-hutech-next-gen-3.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Fan Screening Huy Ka — Võ Điền Gia Huy",
+    meta: "MC sự kiện",
+    description: "Buổi fan screening tại rạp phim dành cho người hâm mộ Võ Điền Gia Huy (Huy Ka).",
+    image: "/images/portfolio/su-kien-fan-screening-huy-ka.jpg",
+    images: [
+      "/images/portfolio/su-kien-fan-screening-huy-ka.jpg",
+      "/images/portfolio/su-kien-fan-screening-huy-ka-2.jpg",
+      "/images/portfolio/su-kien-fan-screening-huy-ka-3.jpg",
+      "/images/portfolio/su-kien-fan-screening-huy-ka-4.jpg",
+      "/images/portfolio/su-kien-fan-screening-huy-ka-5.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "HTV — Lên xe đi người đẹp",
+    meta: "MC truyền hình",
+    description: "Chương trình truyền hình phát sóng trên HTV, Thịnh tham gia dẫn dắt.",
+    image: "/images/portfolio/su-kien-htv-len-xe.jpg",
+    images: [
+      "/images/portfolio/su-kien-htv-len-xe.jpg",
+      "/images/portfolio/su-kien-htv-len-xe-2.jpg",
+      "/images/portfolio/su-kien-htv-len-xe-3.jpg",
+      "/images/portfolio/su-kien-htv-len-xe-4.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Đạt Vĩnh Tiến — Kỷ niệm 20 năm",
+    meta: "MC sự kiện",
+    description: "Chương trình kỷ niệm 20 năm (2005 – 2025) của Đạt Vĩnh Tiến, tổ chức tại sân golf Tân Sơn Nhất.",
+    image: "/images/portfolio/su-kien-dat-vinh-tien-20-nam.jpg",
+    images: [
+      "/images/portfolio/su-kien-dat-vinh-tien-20-nam.jpg",
+      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-2.jpg",
+      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-3.jpg",
+      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-4.jpg",
+      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-5.jpg",
     ],
   },
   {
@@ -209,59 +288,6 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "su-kien",
-    title: "HTV — Lên xe đi người đẹp",
-    meta: "MC truyền hình",
-    description: "Chương trình truyền hình phát sóng trên HTV, Thịnh tham gia dẫn dắt.",
-    image: "/images/portfolio/su-kien-htv-len-xe.jpg",
-    images: [
-      "/images/portfolio/su-kien-htv-len-xe.jpg",
-      "/images/portfolio/su-kien-htv-len-xe-2.jpg",
-      "/images/portfolio/su-kien-htv-len-xe-3.jpg",
-      "/images/portfolio/su-kien-htv-len-xe-4.jpg",
-    ],
-  },
-  {
-    category: "su-kien",
-    title: "CALI CLUB — Vui chơi Hàn Quốc",
-    meta: "MC sự kiện",
-    description: "Sự kiện trò chơi tương tác của CALI CLUB Vietnam với chủ đề Step into the Game World.",
-    image: "/images/portfolio/su-kien-cali-club.jpg",
-    images: [
-      "/images/portfolio/su-kien-cali-club.jpg",
-      "/images/portfolio/su-kien-cali-club-2.jpg",
-      "/images/portfolio/su-kien-cali-club-3.jpg",
-      "/images/portfolio/su-kien-cali-club-4.jpg",
-      "/images/portfolio/su-kien-cali-club-5.jpg",
-    ],
-  },
-  {
-    category: "su-kien",
-    title: "Fan Screening Huy Ka — Võ Điền Gia Huy",
-    meta: "MC sự kiện",
-    description: "Buổi fan screening tại rạp phim dành cho người hâm mộ Võ Điền Gia Huy (Huy Ka).",
-    image: "/images/portfolio/su-kien-fan-screening-huy-ka.jpg",
-    images: [
-      "/images/portfolio/su-kien-fan-screening-huy-ka.jpg",
-      "/images/portfolio/su-kien-fan-screening-huy-ka-2.jpg",
-      "/images/portfolio/su-kien-fan-screening-huy-ka-3.jpg",
-      "/images/portfolio/su-kien-fan-screening-huy-ka-4.jpg",
-      "/images/portfolio/su-kien-fan-screening-huy-ka-5.jpg",
-    ],
-  },
-  {
-    category: "su-kien",
-    title: "Hutech Next Gen Creative",
-    meta: "MC sự kiện",
-    description: "Vòng chung kết cuộc thi The Next Gen Creators – Mùa 3 tại HUTECH, tháng 4/2026.",
-    image: "/images/portfolio/su-kien-hutech-next-gen.jpg",
-    images: [
-      "/images/portfolio/su-kien-hutech-next-gen.jpg",
-      "/images/portfolio/su-kien-hutech-next-gen-2.jpg",
-      "/images/portfolio/su-kien-hutech-next-gen-3.jpg",
-    ],
-  },
-  {
-    category: "su-kien",
     title: "HUTECH Law in Frames — Vòng chung kết",
     meta: "Sự kiện · HUTECH",
     description: "Vòng chung kết cuộc thi HUTECH Law in Frames.",
@@ -276,20 +302,6 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "su-kien",
-    title: "Đạt Vĩnh Tiến — Kỷ niệm 20 năm",
-    meta: "MC sự kiện",
-    description: "Chương trình kỷ niệm 20 năm (2005 – 2025) của Đạt Vĩnh Tiến, tổ chức tại sân golf Tân Sơn Nhất.",
-    image: "/images/portfolio/su-kien-dat-vinh-tien-20-nam.jpg",
-    images: [
-      "/images/portfolio/su-kien-dat-vinh-tien-20-nam.jpg",
-      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-2.jpg",
-      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-3.jpg",
-      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-4.jpg",
-      "/images/portfolio/su-kien-dat-vinh-tien-20-nam-5.jpg",
-    ],
-  },
-  {
-    category: "su-kien",
     title: "Hội nghị Đối thoại Doanh nghiệp Thương mại điện tử TP. Hồ Chí Minh",
     meta: "MC sự kiện",
     description: "Hội nghị Đối thoại Doanh nghiệp Thương mại điện tử TP. Hồ Chí Minh năm 2022 do Sở Công Thương TP.HCM tổ chức, Thịnh dẫn chương trình.",
@@ -300,20 +312,6 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-hoi-nghi-tmdt-3.jpg",
       "/images/portfolio/su-kien-hoi-nghi-tmdt-4.jpg",
       "/images/portfolio/su-kien-hoi-nghi-tmdt-5.jpg",
-    ],
-  },
-  { category: "su-kien", title: "Miss Hutech 2018", meta: "MC sự kiện" },
-  {
-    category: "su-kien",
-    title: "Miss HUTECH 2021 — Vòng sơ khảo",
-    meta: "MC sự kiện",
-    description: "Vòng sơ khảo cuộc thi Miss HUTECH 2021, tổ chức tháng 11/2020 tại Trường Đại học Công nghệ TP.HCM (HUTECH).",
-    image: "/images/portfolio/su-kien-miss-hutech-2021.jpg",
-    images: [
-      "/images/portfolio/su-kien-miss-hutech-2021.jpg",
-      "/images/portfolio/su-kien-miss-hutech-2021-2.jpg",
-      "/images/portfolio/su-kien-miss-hutech-2021-3.jpg",
-      "/images/portfolio/su-kien-miss-hutech-2021-4.jpg",
     ],
   },
   {
@@ -331,6 +329,19 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-lazada-run-6.jpg",
       "/images/portfolio/su-kien-lazada-run-7.jpg",
       "/images/portfolio/su-kien-lazada-run-8.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Miss HUTECH 2021 — Vòng sơ khảo",
+    meta: "MC sự kiện",
+    description: "Vòng sơ khảo cuộc thi Miss HUTECH 2021, tổ chức tháng 11/2020 tại Trường Đại học Công nghệ TP.HCM (HUTECH).",
+    image: "/images/portfolio/su-kien-miss-hutech-2021.jpg",
+    images: [
+      "/images/portfolio/su-kien-miss-hutech-2021.jpg",
+      "/images/portfolio/su-kien-miss-hutech-2021-2.jpg",
+      "/images/portfolio/su-kien-miss-hutech-2021-3.jpg",
+      "/images/portfolio/su-kien-miss-hutech-2021-4.jpg",
     ],
   },
   {
@@ -356,13 +367,6 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/livestream-highland-coffee-2.jpg",
     ],
   },
-  { category: "livestream", title: "Host Livestream bán hàng — Shopee", meta: "Host Livestream" },
-  { category: "livestream", title: "Host Livestream bán hàng — TikTok Shop", meta: "Host Livestream" },
-  { category: "voice-talent", title: "Sony Vietnam", meta: "Voice Talent" },
-  { category: "voice-talent", title: "Zalo", meta: "Voice Talent" },
-  { category: "voice-talent", title: "Mason Group", meta: "Voice Talent" },
-  { category: "voice-talent", title: "Mì Cay Seoul", meta: "Voice Talent" },
-  { category: "voice-talent", title: "Đông Á Bank", meta: "Voice Talent" },
   {
     category: "dao-tao",
     title: "Giảng viên Giọng nói — Thalic Voice",
@@ -388,6 +392,7 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/daotao-coach-livestream-uef-2.jpg",
     ],
   },
+  { category: "su-kien", title: "Miss Hutech 2018", meta: "MC sự kiện" },
   {
     category: "dao-tao",
     title: "Biên tập kịch bản Radio",
@@ -406,7 +411,6 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/livestream-epson-ecotank-3.jpg",
     ],
   },
-  { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream", description: "Dẫn dắt các phiên livestream bán hàng trên Lazada, tối ưu tương tác và chốt đơn." },
   {
     category: "livestream",
     title: "Lazada Siêu Live Công Nghệ — Misthy x Chika MVK",
@@ -420,6 +424,78 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/livestream-lazada-sieu-live-cong-nghe-4.jpg",
     ],
   },
+  // --- Livestream bán hàng: ẩn khỏi "Tất cả", chỉ hiện khi khách mở thư mục Livestream ---
+  { category: "livestream", title: "Host Livestream bán hàng — Shopee", meta: "Host Livestream", hideInAll: true },
+  { category: "livestream", title: "Host Livestream bán hàng — TikTok Shop", meta: "Host Livestream", hideInAll: true },
+  { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream", description: "Dẫn dắt các phiên livestream bán hàng trên Lazada, tối ưu tương tác và chốt đơn.", hideInAll: true },
+  // --- Voice Talent: ẩn khỏi "Tất cả"; bấm vào thẻ để xem video / nghe file voice (driveId = ID file trên Google Drive) ---
+  {
+    category: "voice-talent",
+    title: "Zalopay",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "video", driveId: "1d3h1sL5poC_899sKd-aaXCO_043lvMrX" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Mì Cay Seoul",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "video", driveId: "1WnV4kQm5-C1LSwqGu31Iys6CIpQr5n51" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Nam A Bank",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "video", driveId: "1IYYWvuRVIr6g97Pd1H6o7iexReURWzNv" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Reflective Learnings",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "video", driveId: "1cxOLnMsMFAh3fPXkvoX1V725eUnuCo7D" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Droppi",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "video", driveId: "1dZJ7xnwZ4YIPQZgBg1hQq6qwMSvAIkTR" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Bách Gia Trăm Họ (2019)",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "audio", driveId: "1FNAU9Vt3Ew_6_Hsg7clBuk8afCu-j9Nw" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Thu hồi bằng thạc sĩ",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [{ kind: "audio", driveId: "1A4abTei8DmyBtoyaDkfySlVzAxSJafXS" }],
+  },
+  {
+    category: "voice-talent",
+    title: "Sony Vietnam",
+    meta: "Voice Talent",
+    hideInAll: true,
+  },
+  {
+    category: "voice-talent",
+    title: "Masan Group",
+    meta: "Voice Talent",
+    hideInAll: true,
+  },
+  {
+    category: "voice-talent",
+    title: "Đông Á Bank",
+    meta: "Voice Talent",
+    hideInAll: true,
+  },
 ];
 
 export const partners = [
@@ -428,7 +504,7 @@ export const partners = [
   "TikTok Shop",
   "Sony Vietnam",
   "Zalo",
-  "Mason Group",
+  "Masan Group",
   "Mì Cay Seoul",
   "Đông Á Bank",
   "VOV3 - The One Radio",
