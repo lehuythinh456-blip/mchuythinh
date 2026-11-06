@@ -126,7 +126,11 @@ export default function Portfolio() {
                           ) : (
                             <Headphones className="size-3.5" aria-hidden="true" />
                           )}
-                          {media[0].kind === "video" ? "Xem video đã lồng tiếng" : "Nghe file voice"}
+                          {media[0].kind === "video"
+                            ? media.length > 1
+                              ? `Xem ${media.length} video đã lồng tiếng`
+                              : "Xem video đã lồng tiếng"
+                            : "Nghe file voice"}
                         </span>
                       ) : (
                         <span className="mt-3 inline-flex items-center self-start rounded-full border border-border px-3 py-1.5 text-xs text-foreground-soft">

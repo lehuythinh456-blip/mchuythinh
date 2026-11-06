@@ -106,10 +106,14 @@ export type PortfolioItem = {
 };
 
 export type VoiceMedia = {
+  /** Nơi đặt video/file voice. Mặc định là Google Drive. */
+  source?: "drive" | "facebook" | "youtube";
   kind: "video" | "audio";
-  /** ID file trên Google Drive (file cần chia sẻ "Bất kỳ ai có đường liên kết"). */
-  driveId: string;
-  /** Tên hiển thị khi một thương hiệu có nhiều file. */
+  /** Drive: ID file (chia sẻ "Bất kỳ ai có đường liên kết") · YouTube: ID video · Facebook: link đầy đủ của reel/video công khai. */
+  id: string;
+  /** Video dọc (reel 9:16): khung phát sẽ cao hơn. */
+  portrait?: boolean;
+  /** Tên hiển thị khi một thương hiệu có nhiều video. */
   label?: string;
 };
 
@@ -428,71 +432,105 @@ export const portfolio: PortfolioItem[] = [
   { category: "livestream", title: "Host Livestream bán hàng — Shopee", meta: "Host Livestream", hideInAll: true },
   { category: "livestream", title: "Host Livestream bán hàng — TikTok Shop", meta: "Host Livestream", hideInAll: true },
   { category: "livestream", title: "Host Livestream bán hàng — Lazada", meta: "Host Livestream", description: "Dẫn dắt các phiên livestream bán hàng trên Lazada, tối ưu tương tác và chốt đơn.", hideInAll: true },
-  // --- Voice Talent: ẩn khỏi "Tất cả"; bấm vào thẻ để xem video / nghe file voice (driveId = ID file trên Google Drive) ---
+  // --- Voice Talent: ẩn khỏi "Tất cả"; bấm vào thẻ để xem video / nghe file voice (xem kiểu VoiceMedia) ---
+  {
+    category: "voice-talent",
+    title: "Sony Vietnam",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [
+      { source: "facebook", kind: "video", id: "https://www.facebook.com/reel/1855398595339025/", portrait: true, label: "Khu vực Manifest năm mới" },
+      { source: "youtube", kind: "video", id: "PKgqyvGyhe4", label: "INZONE E9 — Tai nghe gaming in-ear" },
+      { source: "youtube", kind: "video", id: "-Z58v9fYELI", label: "INZONE H9 II — Tai nghe gaming chống ồn không dây" },
+      { source: "facebook", kind: "video", id: "https://www.facebook.com/reel/3777730002362897/", portrait: true, label: "Manifest với Sony — Đón Tết như ý" },
+      { source: "facebook", kind: "video", id: "https://www.facebook.com/reel/1941325300095868/", portrait: true, label: "Tết chill kiểu nào? Sony chiều như ý" },
+      { source: "facebook", kind: "video", id: "https://www.facebook.com/reel/1085393050295238/", portrait: true, label: "Manifest năm mới — Cầu gì cũng phải “nét”" },
+    ],
+  },
   {
     category: "voice-talent",
     title: "Zalopay",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "video", driveId: "1d3h1sL5poC_899sKd-aaXCO_043lvMrX" }],
+    media: [
+      { kind: "video", id: "1d3h1sL5poC_899sKd-aaXCO_043lvMrX" },
+    ],
+  },
+  {
+    category: "voice-talent",
+    title: "We Choice — WeYoung Awards",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [
+      { source: "facebook", kind: "video", id: "https://www.facebook.com/reel/1379431837019963/" },
+    ],
+  },
+  {
+    category: "voice-talent",
+    title: "Nutrilite",
+    meta: "Voice Talent",
+    hideInAll: true,
+    media: [
+      { source: "facebook", kind: "video", id: "https://www.facebook.com/reel/1609689827415294/" },
+    ],
   },
   {
     category: "voice-talent",
     title: "Mì Cay Seoul",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "video", driveId: "1WnV4kQm5-C1LSwqGu31Iys6CIpQr5n51" }],
+    media: [
+      { kind: "video", id: "1WnV4kQm5-C1LSwqGu31Iys6CIpQr5n51", portrait: true },
+    ],
   },
   {
     category: "voice-talent",
     title: "Nam A Bank",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "video", driveId: "1IYYWvuRVIr6g97Pd1H6o7iexReURWzNv" }],
+    media: [
+      { kind: "video", id: "1IYYWvuRVIr6g97Pd1H6o7iexReURWzNv" },
+    ],
   },
   {
     category: "voice-talent",
     title: "Reflective Learnings",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "video", driveId: "1cxOLnMsMFAh3fPXkvoX1V725eUnuCo7D" }],
+    media: [
+      { kind: "video", id: "1cxOLnMsMFAh3fPXkvoX1V725eUnuCo7D" },
+    ],
   },
   {
     category: "voice-talent",
     title: "Droppi",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "video", driveId: "1dZJ7xnwZ4YIPQZgBg1hQq6qwMSvAIkTR" }],
+    media: [
+      { kind: "video", id: "1dZJ7xnwZ4YIPQZgBg1hQq6qwMSvAIkTR" },
+    ],
   },
   {
     category: "voice-talent",
     title: "Bách Gia Trăm Họ (2019)",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "audio", driveId: "1FNAU9Vt3Ew_6_Hsg7clBuk8afCu-j9Nw" }],
+    media: [
+      { kind: "audio", id: "1FNAU9Vt3Ew_6_Hsg7clBuk8afCu-j9Nw" },
+    ],
   },
   {
     category: "voice-talent",
     title: "Thu hồi bằng thạc sĩ",
     meta: "Voice Talent",
     hideInAll: true,
-    media: [{ kind: "audio", driveId: "1A4abTei8DmyBtoyaDkfySlVzAxSJafXS" }],
-  },
-  {
-    category: "voice-talent",
-    title: "Sony Vietnam",
-    meta: "Voice Talent",
-    hideInAll: true,
+    media: [
+      { kind: "audio", id: "1A4abTei8DmyBtoyaDkfySlVzAxSJafXS" },
+    ],
   },
   {
     category: "voice-talent",
     title: "Masan Group",
-    meta: "Voice Talent",
-    hideInAll: true,
-  },
-  {
-    category: "voice-talent",
-    title: "Đông Á Bank",
     meta: "Voice Talent",
     hideInAll: true,
   },
