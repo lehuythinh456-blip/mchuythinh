@@ -1,6 +1,6 @@
 import { ArrowRight, PlayCircle } from "lucide-react";
 import Container from "../Container";
-import HeroReel from "../HeroReel";
+import HeroVideo from "../HeroVideo";
 import { site, stats } from "@/lib/data";
 
 export default function Hero() {
@@ -10,7 +10,7 @@ export default function Hero() {
         className="pointer-events-none absolute -top-32 right-[-10%] h-[28rem] w-[28rem] rounded-full bg-accent-tint blur-3xl opacity-70"
         aria-hidden="true"
       />
-      <Container className="relative grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
+      <Container className="relative grid gap-12 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:py-28">
         <div className="flex flex-col gap-7">
           <span className="section-label">{site.role}</span>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-foreground text-balance">
@@ -50,7 +50,7 @@ export default function Hero() {
           </dl>
         </div>
 
-        <HeroReel />
+        <HeroVideo />
       </Container>
     </section>
   );

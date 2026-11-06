@@ -19,7 +19,7 @@ export const stats = [
   { value: "6+", label: "năm BTV / MC Truyền hình - Sự kiện" },
   { value: "6+", label: "năm kinh nghiệm Host Livestream" },
   { value: "5+", label: "năm đào tạo Giọng nói - Giao tiếp - Thuyết trình" },
-  { value: "15+", label: "thương hiệu & đối tác đã đồng hành" },
+  { value: "40+", label: "thương hiệu & đối tác đã đồng hành" },
 ];
 
 export const bio = {
@@ -587,91 +587,4 @@ export const navLinks = [
   { href: "#doi-tac", label: "Đối tác" },
   { href: "#thu-vien", label: "Thư viện" },
   { href: "#lien-he", label: "Liên hệ" },
-];
-
-// Teaser showreel ở đầu trang (cột phải của Hero): các cảnh chạy lần lượt, ảnh nằm trong public/images.
-// position = vị trí lấy nét khi cắt ảnh về khung dọc 4:5 ("x% y%"). cta chỉ dùng cho cảnh cuối.
-export type ReelScene = {
-  src: string;
-  alt: string;
-  eyebrow: string;
-  title: string;
-  position?: string;
-  cta?: { label: string; href: string };
-};
-
-export const heroReel: ReelScene[] = [
-  {
-    src: "/images/portrait/about.jpg",
-    alt: "Chân dung Huy Thịnh trong bộ vest đen",
-    eyebrow: "MC · Host Livestream · Voice Talent",
-    title: "Huy Thịnh",
-    position: "50% 12%",
-  },
-  {
-    src: "/images/portfolio/su-kien-hutech-next-gen.jpg",
-    alt: "Huy Thịnh dẫn chung kết The Next Gen Creators",
-    eyebrow: "MC chung kết · 04/2026",
-    title: "The Next Gen Creators",
-  },
-  {
-    src: "/images/portfolio/su-kien-unilever-fifa-3.jpg",
-    alt: "Huy Thịnh dẫn sự kiện Unilever x FIFA World Cup 2026",
-    eyebrow: "Người dẫn chương trình",
-    title: "Unilever x FIFA World Cup 2026™",
-  },
-  {
-    src: "/images/portfolio/su-kien-nttu-gala-4.jpg",
-    alt: "Huy Thịnh dẫn đêm gala chào đón tân sinh viên NTTU",
-    eyebrow: "Đêm gala · 2025 – 2026",
-    title: "Gala Chào Đón Tân Sinh Viên NTTU",
-    position: "45% 50%",
-  },
-  {
-    src: "/images/portfolio/su-kien-cali-club-7.jpg",
-    alt: "Huy Thịnh dẫn sự kiện trò chơi CALI CLUB",
-    eyebrow: "MC sự kiện",
-    title: "CALI CLUB — Vui chơi Hàn Quốc",
-    position: "30% 50%",
-  },
-  {
-    src: "/images/portfolio/su-kien-lazada-run-2.jpg",
-    alt: "Huy Thịnh dẫn giải chạy Lazada Run",
-    eyebrow: "MC giải chạy",
-    title: "Lazada Run",
-  },
-  {
-    src: "/images/portfolio/su-kien-year-end-shinhan.jpg",
-    alt: "Huy Thịnh dẫn Year End Party của Shinhan Group Beauty Legends",
-    eyebrow: "Year End Party",
-    title: "Shinhan Group Beauty Legends",
-  },
-  {
-    src: "/images/portfolio/su-kien-fashion-show-4.jpg",
-    alt: "Huy Thịnh dẫn fashion show Sắc Hương Di Sản",
-    eyebrow: "Fashion Show",
-    title: "Sắc Hương Di Sản",
-    position: "45% 50%",
-  },
-  {
-    src: "/images/portfolio/su-kien-dat-vinh-tien-20-nam-3.jpg",
-    alt: "Huy Thịnh dẫn chương trình kỷ niệm 20 năm Đạt Vĩnh Tiến",
-    eyebrow: "Kỷ niệm 20 năm",
-    title: "Đạt Vĩnh Tiến",
-    position: "55% 50%",
-  },
-  {
-    src: "/images/portfolio/livestream-lazada-sieu-live-cong-nghe-2.jpg",
-    alt: "Huy Thịnh host phiên Siêu Live Công Nghệ trên Lazada",
-    eyebrow: "Host Livestream",
-    title: "Lazada Siêu Live Công Nghệ",
-  },
-  {
-    src: "/images/portrait/hero.jpg",
-    alt: "Chân dung Huy Thịnh",
-    eyebrow: "Chương trình tiếp theo?",
-    title: "Cùng làm nên điều đặc biệt",
-    position: "62% 30%",
-    cta: { label: "Liên hệ hợp tác", href: "#lien-he" },
-  },
 ];
