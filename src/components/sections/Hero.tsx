@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import Container from "../Container";
+import HeroReel from "../HeroReel";
 import { site, stats } from "@/lib/data";
 
 export default function Hero() {
@@ -50,16 +50,7 @@ export default function Hero() {
           </dl>
         </div>
 
-        <div className="relative aspect-[4/5] w-full max-w-md justify-self-center overflow-hidden rounded-[1.75rem] border border-border lg:max-w-none">
-          <Image
-            src="/images/portrait/hero.jpg"
-            alt="Huy Thịnh — MC / Host Livestream / Voice Talent"
-            fill
-            priority
-            sizes="(min-width: 1024px) 42vw, (min-width: 640px) 60vw, 90vw"
-            className="object-cover"
-          />
-        </div>
+        <HeroReel />
       </Container>
     </section>
   );

@@ -135,6 +135,8 @@ export const portfolio: PortfolioItem[] = [
     images: [
       "/images/portfolio/su-kien-unilever-fifa.jpg",
       "/images/portfolio/su-kien-unilever-fifa-2.jpg",
+      "/images/portfolio/su-kien-unilever-fifa-3.jpg",
+      "/images/portfolio/su-kien-unilever-fifa-4.jpg",
     ],
   },
   {
@@ -149,6 +151,8 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-cali-club-3.jpg",
       "/images/portfolio/su-kien-cali-club-4.jpg",
       "/images/portfolio/su-kien-cali-club-5.jpg",
+      "/images/portfolio/su-kien-cali-club-6.jpg",
+      "/images/portfolio/su-kien-cali-club-7.jpg",
     ],
   },
   {
@@ -175,6 +179,7 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-fan-screening-huy-ka-3.jpg",
       "/images/portfolio/su-kien-fan-screening-huy-ka-4.jpg",
       "/images/portfolio/su-kien-fan-screening-huy-ka-5.jpg",
+      "/images/portfolio/su-kien-fan-screening-huy-ka-6.jpg",
     ],
   },
   {
@@ -236,6 +241,10 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-khai-giang-nttu.jpg",
       "/images/portfolio/su-kien-khai-giang-nttu-2.jpg",
       "/images/portfolio/su-kien-khai-giang-nttu-3.jpg",
+      "/images/portfolio/su-kien-khai-giang-nttu-4.jpg",
+      "/images/portfolio/su-kien-khai-giang-nttu-5.jpg",
+      "/images/portfolio/su-kien-khai-giang-nttu-6.jpg",
+      "/images/portfolio/su-kien-khai-giang-nttu-7.jpg",
     ],
   },
   {
@@ -250,6 +259,8 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-fashion-show-2.jpg",
       "/images/portfolio/su-kien-fashion-show-3.jpg",
       "/images/portfolio/su-kien-fashion-show-4.jpg",
+      "/images/portfolio/su-kien-fashion-show-5.jpg",
+      "/images/portfolio/su-kien-fashion-show-6.jpg",
     ],
   },
   {
@@ -264,6 +275,8 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-year-end-shinhan-2.jpg",
       "/images/portfolio/su-kien-year-end-shinhan-3.jpg",
       "/images/portfolio/su-kien-year-end-shinhan-4.jpg",
+      "/images/portfolio/su-kien-year-end-shinhan-5.jpg",
+      "/images/portfolio/su-kien-year-end-shinhan-6.jpg",
     ],
   },
   {
@@ -276,6 +289,9 @@ export const portfolio: PortfolioItem[] = [
     images: [
       "/images/portfolio/su-kien-sieu-thi-voucher.jpg",
       "/images/portfolio/su-kien-sieu-thi-voucher-2.jpg",
+      "/images/portfolio/su-kien-sieu-thi-voucher-3.jpg",
+      "/images/portfolio/su-kien-sieu-thi-voucher-4.jpg",
+      "/images/portfolio/su-kien-sieu-thi-voucher-5.jpg",
     ],
   },
   {
@@ -288,6 +304,7 @@ export const portfolio: PortfolioItem[] = [
     images: [
       "/images/portfolio/su-kien-talkshow-hutech.jpg",
       "/images/portfolio/su-kien-talkshow-hutech-2.jpg",
+      "/images/portfolio/su-kien-talkshow-hutech-3.jpg",
     ],
   },
   {
@@ -302,6 +319,8 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-hutech-law-in-frames-3.jpg",
       "/images/portfolio/su-kien-hutech-law-in-frames-4.jpg",
       "/images/portfolio/su-kien-hutech-law-in-frames-5.jpg",
+      "/images/portfolio/su-kien-hutech-law-in-frames-6.jpg",
+      "/images/portfolio/su-kien-hutech-law-in-frames-7.jpg",
     ],
   },
   {
@@ -396,11 +415,20 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/daotao-coach-livestream-uef-2.jpg",
     ],
   },
-  { category: "su-kien", title: "Miss Hutech 2018", meta: "MC sự kiện" },
   {
     category: "dao-tao",
     title: "Biên tập kịch bản Radio",
     meta: "Trường Đại học, doanh nghiệp, tập đoàn",
+    description:
+      "Biên tập kịch bản và dẫn dắt các chương trình radio như Tech Story, Karma or Drama (102.7 MHz) cho trường đại học và doanh nghiệp.",
+    image: "/images/portfolio/daotao-bien-tap-radio.jpg",
+    images: [
+      "/images/portfolio/daotao-bien-tap-radio.jpg",
+      "/images/portfolio/daotao-bien-tap-radio-2.jpg",
+      "/images/portfolio/daotao-bien-tap-radio-3.jpg",
+      "/images/portfolio/daotao-bien-tap-radio-5.jpg",
+      "/images/portfolio/daotao-bien-tap-radio-4.jpg",
+    ],
   },
   {
     category: "livestream",
@@ -559,4 +587,91 @@ export const navLinks = [
   { href: "#doi-tac", label: "Đối tác" },
   { href: "#thu-vien", label: "Thư viện" },
   { href: "#lien-he", label: "Liên hệ" },
+];
+
+// Teaser showreel ở đầu trang (cột phải của Hero): các cảnh chạy lần lượt, ảnh nằm trong public/images.
+// position = vị trí lấy nét khi cắt ảnh về khung dọc 4:5 ("x% y%"). cta chỉ dùng cho cảnh cuối.
+export type ReelScene = {
+  src: string;
+  alt: string;
+  eyebrow: string;
+  title: string;
+  position?: string;
+  cta?: { label: string; href: string };
+};
+
+export const heroReel: ReelScene[] = [
+  {
+    src: "/images/portrait/about.jpg",
+    alt: "Chân dung Huy Thịnh trong bộ vest đen",
+    eyebrow: "MC · Host Livestream · Voice Talent",
+    title: "Huy Thịnh",
+    position: "50% 12%",
+  },
+  {
+    src: "/images/portfolio/su-kien-hutech-next-gen.jpg",
+    alt: "Huy Thịnh dẫn chung kết The Next Gen Creators",
+    eyebrow: "MC chung kết · 04/2026",
+    title: "The Next Gen Creators",
+  },
+  {
+    src: "/images/portfolio/su-kien-unilever-fifa-3.jpg",
+    alt: "Huy Thịnh dẫn sự kiện Unilever x FIFA World Cup 2026",
+    eyebrow: "Người dẫn chương trình",
+    title: "Unilever x FIFA World Cup 2026™",
+  },
+  {
+    src: "/images/portfolio/su-kien-nttu-gala-4.jpg",
+    alt: "Huy Thịnh dẫn đêm gala chào đón tân sinh viên NTTU",
+    eyebrow: "Đêm gala · 2025 – 2026",
+    title: "Gala Chào Đón Tân Sinh Viên NTTU",
+    position: "45% 50%",
+  },
+  {
+    src: "/images/portfolio/su-kien-cali-club-7.jpg",
+    alt: "Huy Thịnh dẫn sự kiện trò chơi CALI CLUB",
+    eyebrow: "MC sự kiện",
+    title: "CALI CLUB — Vui chơi Hàn Quốc",
+    position: "30% 50%",
+  },
+  {
+    src: "/images/portfolio/su-kien-lazada-run-2.jpg",
+    alt: "Huy Thịnh dẫn giải chạy Lazada Run",
+    eyebrow: "MC giải chạy",
+    title: "Lazada Run",
+  },
+  {
+    src: "/images/portfolio/su-kien-year-end-shinhan.jpg",
+    alt: "Huy Thịnh dẫn Year End Party của Shinhan Group Beauty Legends",
+    eyebrow: "Year End Party",
+    title: "Shinhan Group Beauty Legends",
+  },
+  {
+    src: "/images/portfolio/su-kien-fashion-show-4.jpg",
+    alt: "Huy Thịnh dẫn fashion show Sắc Hương Di Sản",
+    eyebrow: "Fashion Show",
+    title: "Sắc Hương Di Sản",
+    position: "45% 50%",
+  },
+  {
+    src: "/images/portfolio/su-kien-dat-vinh-tien-20-nam-3.jpg",
+    alt: "Huy Thịnh dẫn chương trình kỷ niệm 20 năm Đạt Vĩnh Tiến",
+    eyebrow: "Kỷ niệm 20 năm",
+    title: "Đạt Vĩnh Tiến",
+    position: "55% 50%",
+  },
+  {
+    src: "/images/portfolio/livestream-lazada-sieu-live-cong-nghe-2.jpg",
+    alt: "Huy Thịnh host phiên Siêu Live Công Nghệ trên Lazada",
+    eyebrow: "Host Livestream",
+    title: "Lazada Siêu Live Công Nghệ",
+  },
+  {
+    src: "/images/portrait/hero.jpg",
+    alt: "Chân dung Huy Thịnh",
+    eyebrow: "Chương trình tiếp theo?",
+    title: "Cùng làm nên điều đặc biệt",
+    position: "62% 30%",
+    cta: { label: "Liên hệ hợp tác", href: "#lien-he" },
+  },
 ];

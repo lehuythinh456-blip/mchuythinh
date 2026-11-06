@@ -113,3 +113,15 @@ body {
   .logo-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; row-gap: 1.5rem; }
   .logo-item[aria-hidden="true"] { display: none; }
 }
+
+/* Teaser showreel ở Hero */
+.reel-bar {
+  transform: scaleX(0);
+  animation: reel-progress var(--reel-ms, 3000ms) linear forwards;
+}
+@keyframes reel-progress { to { transform: scaleX(1); } }
+.reel-caption { animation: reel-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes reel-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
