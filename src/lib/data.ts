@@ -199,6 +199,13 @@ export const portfolio: PortfolioItem[] = [
     title: "HTV — Lên xe đi người đẹp",
     meta: "MC truyền hình",
     description: "Chương trình truyền hình phát sóng trên HTV, Thịnh tham gia dẫn dắt.",
+    image: "/images/portfolio/su-kien-htv-len-xe.jpg",
+    images: [
+      "/images/portfolio/su-kien-htv-len-xe.jpg",
+      "/images/portfolio/su-kien-htv-len-xe-2.jpg",
+      "/images/portfolio/su-kien-htv-len-xe-3.jpg",
+      "/images/portfolio/su-kien-htv-len-xe-4.jpg",
+    ],
   },
   {
     category: "su-kien",
@@ -216,7 +223,13 @@ export const portfolio: PortfolioItem[] = [
     category: "su-kien",
     title: "Hutech Next Gen Creative",
     meta: "MC sự kiện",
-    description: "Chương trình Next Gen Creative dành cho sinh viên Đại học HUTECH.",
+    description: "Vòng chung kết cuộc thi The Next Gen Creators – Mùa 3 tại HUTECH, tháng 4/2026.",
+    image: "/images/portfolio/su-kien-hutech-next-gen.jpg",
+    images: [
+      "/images/portfolio/su-kien-hutech-next-gen.jpg",
+      "/images/portfolio/su-kien-hutech-next-gen-2.jpg",
+      "/images/portfolio/su-kien-hutech-next-gen-3.jpg",
+    ],
   },
   {
     category: "su-kien",
