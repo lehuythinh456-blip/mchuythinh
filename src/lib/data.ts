@@ -569,10 +569,10 @@ export const partners = [
   "Shopee",
   "TikTok Shop",
   "Sony Vietnam",
-  "Zalo",
+  "Zalopay",
   "Masan Group",
   "Mì Cay Seoul",
-  "Đông Á Bank",
+  "Nam A Bank",
   "VOV3 - The One Radio",
 ];
 
