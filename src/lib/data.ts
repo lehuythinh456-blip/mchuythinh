@@ -36,6 +36,10 @@ export const achievements = [
     detail: "Người dẫn chương trình Phát thanh - Truyền hình 2021",
   },
   {
+    title: "Giám khảo The MC Race 2026",
+    detail: "Hội đồng Giám khảo Vòng Bán kết cuộc thi Người dẫn chương trình",
+  },
+  {
     title: "Biên tập viên / VJ",
     detail: "Đài Tiếng nói Việt Nam VOV3 — The One Radio",
   },
@@ -46,6 +50,10 @@ export const achievements = [
   {
     title: "Cộng tác viên biên tập & đưa tin",
     detail: "Báo Pháp luật TP. Hồ Chí Minh",
+  },
+  {
+    title: "Báo chí đưa tin",
+    detail: "Thanh Niên, Sài Gòn Giải Phóng — cuộc thi Người dẫn chương trình PT-TH",
   },
 ];
 
@@ -169,6 +177,14 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "su-kien",
+    title: "Giám khảo The MC Race 2026",
+    meta: "Ban Giám khảo Vòng Bán kết",
+    description:
+      "Thịnh được Ban Tổ chức mời làm thành viên Hội đồng Giám khảo Vòng Bán kết cuộc thi Người dẫn chương trình The MC Race 2026.",
+    image: "/images/portfolio/su-kien-mc-race-2026.jpg",
+  },
+  {
+    category: "su-kien",
     title: "Fan Screening Huy Ka — Võ Điền Gia Huy",
     meta: "MC sự kiện",
     description: "Buổi fan screening tại rạp phim dành cho người hâm mộ Võ Điền Gia Huy (Huy Ka).",
@@ -249,6 +265,30 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "su-kien",
+    title: "Ngày hội Văn hoá & Việc làm Việt – Hàn 2025",
+    meta: "MC sự kiện",
+    description:
+      "Vietnam – Korea Cultural & Job Fair Festival 2025, có sự tham dự của Tổng Lãnh sự quán Hàn Quốc tại TP.HCM, lãnh đạo doanh nghiệp Việt – Hàn và khoảng 30 cơ quan báo chí, trong đó có KBS.",
+    image: "/images/portfolio/su-kien-viet-han-2025.jpg",
+    images: [
+      "/images/portfolio/su-kien-viet-han-2025.jpg",
+      "/images/portfolio/su-kien-viet-han-2025-2.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Talkshow “Chuyện nhà” — Nguyễn Kim x Daikin",
+    meta: "Host talkshow",
+    description:
+      "Chuỗi talkshow “Chuyện nhà” của Nguyễn Kim, chia sẻ giải pháp giúp ngôi nhà thông minh, tiện lợi và “xanh” hơn, cùng khách mời từ Daikin Vietnam.",
+    image: "/images/portfolio/su-kien-talkshow-nguyen-kim-2.jpg",
+    images: [
+      "/images/portfolio/su-kien-talkshow-nguyen-kim-2.jpg",
+      "/images/portfolio/su-kien-talkshow-nguyen-kim.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
     title: "Fashion Show \"Sắc Hương Di Sản\"",
     description:
       "Chương trình trình diễn thời trang \"Sắc Hương Di Sản\", Thịnh dẫn dắt toàn bộ chương trình.",
@@ -278,6 +318,14 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/su-kien-year-end-shinhan-5.jpg",
       "/images/portfolio/su-kien-year-end-shinhan-6.jpg",
     ],
+  },
+  {
+    category: "su-kien",
+    title: "Vở diễn tốt nghiệp “Bến đợi đời người”",
+    meta: "Voice off & MC",
+    description:
+      "Đêm diễn báo cáo tốt nghiệp lớp Đạo diễn sân khấu K7A, Trường Đại học Sân khấu – Điện ảnh TP.HCM, tháng 3/2025. Thịnh đảm nhận voice off và dẫn chương trình.",
+    image: "/images/portfolio/su-kien-ben-doi-doi-nguoi.jpg",
   },
   {
     category: "su-kien",
@@ -369,6 +417,26 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "livestream",
+    title: "TMV Ngọc Dung — Birthday Party Live 28 năm",
+    meta: "Host Livestream",
+    description:
+      "Phiên livestream mừng sinh nhật 28 năm của Thẩm mỹ viện Ngọc Dung ngày 8.8, kéo dài từ 10:00 đến 16:00. Thịnh cũng dẫn phiên live 7.7 kéo dài 8 tiếng của thương hiệu.",
+    image: "/images/portfolio/livestream-ngoc-dung-28-nam.jpg",
+  },
+  {
+    category: "livestream",
+    title: "Knorr — Mega Live “Đại tiệc Shopping Giáng sinh”",
+    meta: "Host Livestream",
+    description:
+      "Mega Live cùng nghệ sĩ Trường Giang giới thiệu nước mắm Knorr, deal combo bán hết hàng chỉ sau khoảng 20 phút.",
+    image: "/images/portfolio/livestream-knorr.jpg",
+    images: [
+      "/images/portfolio/livestream-knorr.jpg",
+      "/images/portfolio/livestream-knorr-2.jpg",
+    ],
+  },
+  {
+    category: "livestream",
     title: "Livestream ASUS Singapore",
     description:
       "Phiên livestream giới thiệu sản phẩm ASUS trong chuyến làm việc tại Singapore.",
@@ -381,9 +449,9 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "livestream",
-    title: "Livestream Highland Coffee",
+    title: "Livestream Highlands Coffee",
     meta: "Host Livestream",
-    description: "Phiên livestream giới thiệu sản phẩm Highland Coffee.",
+    description: "Phiên livestream giới thiệu sản phẩm Highlands Coffee.",
     image: "/images/portfolio/livestream-highland-coffee.jpg",
     images: [
       "/images/portfolio/livestream-highland-coffee.jpg",
@@ -417,6 +485,14 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "dao-tao",
+    title: "Workshop “KOL/KOC & Nghề livestream trong thời đại số” — HCE",
+    meta: "Diễn giả",
+    description:
+      "Workshop dành cho sinh viên Trường Cao đẳng Kinh tế TP.HCM ngày 23/10/2025: biến đam mê livestream thành thu nhập.",
+    image: "/images/portfolio/daotao-workshop-hce.jpg",
+  },
+  {
+    category: "dao-tao",
     title: "Biên tập kịch bản Radio",
     meta: "Trường Đại học, doanh nghiệp, tập đoàn",
     description:
@@ -432,15 +508,18 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     category: "livestream",
-    title: "Livestream Epson EcoTank Store",
+    title: "Epson Việt Nam — Livestream EcoTank",
     description:
-      "Phiên livestream giới thiệu dòng máy in Epson EcoTank tại cửa hàng.",
+      "Gần 1 năm đồng hành host các phiên livestream của Epson Việt Nam trên Shopee Mall (8.8, 9.9, 10.10, Countdown...) cùng khách mời Happy Hidari, Vân Vân, Châu Bí Ngô, Gà Tổng. Thịnh còn hát và tương tác trực tiếp trên live để giữ chân người xem.",
     meta: "Host Livestream",
     image: "/images/portfolio/livestream-epson-ecotank.jpg",
     images: [
       "/images/portfolio/livestream-epson-ecotank.jpg",
       "/images/portfolio/livestream-epson-ecotank-2.jpg",
       "/images/portfolio/livestream-epson-ecotank-3.jpg",
+      "/images/portfolio/livestream-epson-ecotank-4.jpg",
+      "/images/portfolio/livestream-epson-ecotank-5.jpg",
+      "/images/portfolio/livestream-epson-ecotank-6.jpg",
     ],
   },
   {
@@ -574,6 +653,18 @@ export const partners = [
   "Mì Cay Seoul",
   "Nam A Bank",
   "VOV3 - The One Radio",
+  "Unilever",
+  "Epson",
+  "TMV Ngọc Dung",
+  "Knorr",
+  "Nutrilite",
+  "Nguyễn Kim",
+  "Daikin",
+  "ASUS",
+  "Highlands Coffee",
+  "WeChoice Awards",
+  "HTV",
+  "Shinhan",
 ];
 
 // Khi có logo chính thức: bỏ file vào public/images/partners/ rồi khai báo ở đây,
