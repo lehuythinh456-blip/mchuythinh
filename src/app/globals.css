@@ -113,3 +113,69 @@ body {
   .logo-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; row-gap: 1.5rem; }
   .logo-item[aria-hidden="true"] { display: none; }
 }
+
+/* Dải ảnh sự kiện tự trượt phải→trái, mờ sáng ở giữa và chìm vào bóng tối ở hai mép */
+.photo-strip {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #0b0a08;
+}
+.photo-strip::before,
+.photo-strip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(3rem, 14%, 10rem);
+  z-index: 2;
+  pointer-events: none;
+}
+.photo-strip::before { left: 0; background: linear-gradient(90deg, #0b0a08 0%, transparent 100%); }
+.photo-strip::after { right: 0; background: linear-gradient(270deg, #0b0a08 0%, transparent 100%); }
+.photo-track {
+  display: flex;
+  width: max-content;
+  gap: 0.875rem;
+  padding: 0.875rem;
+  animation: photo-scroll var(--dur, 48s) linear infinite;
+}
+.photo-strip:hover .photo-track { animation-play-state: paused; }
+.photo-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: clamp(14rem, 22vw, 20rem);
+  height: clamp(10rem, 15vw, 14rem);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@keyframes photo-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .photo-track { animation: none; flex-wrap: wrap; width: auto; padding: 0; }
+  .photo-strip::before, .photo-strip::after { display: none; }
+}
+
+/* Lightbox: chuyển ảnh trượt + sáng/tối theo hướng next/prev */
+@keyframes lightbox-enter-right {
+  from { opacity: 0; transform: translateX(48px) scale(0.98); filter: brightness(0.35) saturate(0.85); }
+  to { opacity: 1; transform: translateX(0) scale(1); filter: brightness(1) saturate(1); }
+}
+@keyframes lightbox-enter-left {
+  from { opacity: 0; transform: translateX(-48px) scale(0.98); filter: brightness(0.35) saturate(0.85); }
+  to { opacity: 1; transform: translateX(0) scale(1); filter: brightness(1) saturate(1); }
+}
+@keyframes lightbox-exit-left {
+  from { opacity: 1; transform: translateX(0) scale(1); filter: brightness(1); }
+  to { opacity: 0; transform: translateX(-48px) scale(0.98); filter: brightness(0.25); }
+}
+@keyframes lightbox-exit-right {
+  from { opacity: 1; transform: translateX(0) scale(1); filter: brightness(1); }
+  to { opacity: 0; transform: translateX(48px) scale(0.98); filter: brightness(0.25); }
+}
+.lightbox-enter-right { animation: lightbox-enter-right 450ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.lightbox-enter-left { animation: lightbox-enter-left 450ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.lightbox-exit-left { animation: lightbox-exit-left 450ms cubic-bezier(0.4, 0, 1, 1) forwards; }
+.lightbox-exit-right { animation: lightbox-exit-right 450ms cubic-bezier(0.4, 0, 1, 1) forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .lightbox-enter-right, .lightbox-enter-left, .lightbox-exit-left, .lightbox-exit-right { animation: none; }
+}

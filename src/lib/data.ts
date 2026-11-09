@@ -368,6 +368,69 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
+    category: "su-kien",
+    title: "Ngày hội Văn hoá & Việc làm Việt – Hàn 2025",
+    meta: "MC sự kiện",
+    description: "Ngày hội Văn hoá & Việc làm Việt – Hàn 2025, kết nối văn hoá và cơ hội việc làm giữa hai nước.",
+    image: "/images/portfolio/su-kien-ngay-hoi-viet-han-2025.jpg",
+    images: [
+      "/images/portfolio/su-kien-ngay-hoi-viet-han-2025.jpg",
+      "/images/portfolio/su-kien-ngay-hoi-viet-han-2025-2.jpg",
+      "/images/portfolio/su-kien-ngay-hoi-viet-han-2025-3.jpg",
+      "/images/portfolio/su-kien-ngay-hoi-viet-han-2025-4.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Vở diễn tốt nghiệp \"Bến đợi đời người\"",
+    meta: "MC dẫn dắt chương trình",
+    description: "Dẫn dắt chương trình vở diễn tốt nghiệp \"Bến đợi đời người\".",
+    image: "/images/portfolio/su-kien-ben-doi-doi-nguoi.jpg",
+    images: [
+      "/images/portfolio/su-kien-ben-doi-doi-nguoi.jpg",
+      "/images/portfolio/su-kien-ben-doi-doi-nguoi-2.jpg",
+      "/images/portfolio/su-kien-ben-doi-doi-nguoi-3.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "DaiKin & NguyenKim — Talkshow Châu Muối",
+    meta: "MC sự kiện",
+    description: "Talkshow của DaiKin & Nguyễn Kim cùng khách mời KOL Châu Muối.",
+    image: "/images/portfolio/su-kien-daikin-nguyenkim-talkshow-chau-muoi.jpg",
+    images: [
+      "/images/portfolio/su-kien-daikin-nguyenkim-talkshow-chau-muoi.jpg",
+      "/images/portfolio/su-kien-daikin-nguyenkim-talkshow-chau-muoi-2.jpg",
+      "/images/portfolio/su-kien-daikin-nguyenkim-talkshow-chau-muoi-3.jpg",
+      "/images/portfolio/su-kien-daikin-nguyenkim-talkshow-chau-muoi-4.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Liveshow Cha và Con",
+    meta: "MC sự kiện",
+    description: "Liveshow âm nhạc chủ đề \"Cha và Con\".",
+    image: "/images/portfolio/su-kien-liveshow-cha-va-con.jpg",
+    images: [
+      "/images/portfolio/su-kien-liveshow-cha-va-con.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-2.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-3.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-4.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-5.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-6.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-7.jpg",
+      "/images/portfolio/su-kien-liveshow-cha-va-con-8.jpg",
+    ],
+  },
+  {
+    category: "su-kien",
+    title: "Giám khảo MC Race — Đại học Ngân Hàng",
+    meta: "Giám khảo",
+    description: "Giám khảo cuộc thi MC Race tổ chức tại Trường Đại học Ngân hàng TP.HCM.",
+    image: "/images/portfolio/su-kien-giam-khao-mc-race-ngan-hang.jpg",
+    images: ["/images/portfolio/su-kien-giam-khao-mc-race-ngan-hang.jpg"],
+  },
+  {
     category: "livestream",
     title: "Livestream ASUS Singapore",
     description:
@@ -391,6 +454,39 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
+    category: "livestream",
+    title: "Knorr — Mega Live \"Đại tiệc Shopping Giáng sinh\"",
+    meta: "Host Livestream",
+    description: "Phiên Mega Live \"Đại tiệc Shopping Giáng sinh\" của Knorr cùng khách mời Trường Giang.",
+    image: "/images/portfolio/livestream-knorr-mega-live-giang-sinh.jpg",
+    images: [
+      "/images/portfolio/livestream-knorr-mega-live-giang-sinh.jpg",
+      "/images/portfolio/livestream-knorr-mega-live-giang-sinh-2.jpg",
+      "/images/portfolio/livestream-knorr-mega-live-giang-sinh-3.jpg",
+      "/images/portfolio/livestream-knorr-mega-live-giang-sinh-4.jpg",
+    ],
+  },
+  {
+    category: "livestream",
+    title: "TMV Ngọc Dung — Birthday Party Live 28 năm",
+    meta: "Host Livestream",
+    description: "Livestream tiệc sinh nhật 28 năm của TMV Ngọc Dung.",
+    image: "/images/portfolio/livestream-tmv-ngoc-dung-28-nam.jpg",
+    images: ["/images/portfolio/livestream-tmv-ngoc-dung-28-nam.jpg"],
+  },
+  {
+    category: "livestream",
+    title: "Epson — Branding cùng KOL",
+    meta: "Host Livestream",
+    description: "Phiên livestream branding Epson cùng các KOL Vân Vân, Tony Phùng, Châu Bí Ngô.",
+    image: "/images/portfolio/livestream-epson-branding-kol.jpg",
+    images: [
+      "/images/portfolio/livestream-epson-branding-kol.jpg",
+      "/images/portfolio/livestream-epson-branding-kol-2.jpg",
+      "/images/portfolio/livestream-epson-branding-kol-3.jpg",
+    ],
+  },
+  {
     category: "dao-tao",
     title: "Giảng viên Giọng nói — Thalic Voice",
     description:
@@ -401,6 +497,13 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/daotao-giang-vien-thalic.jpg",
       "/images/portfolio/daotao-giang-vien-thalic-2.jpg",
       "/images/portfolio/daotao-giang-vien-thalic-3.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-4.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-5.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-6.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-7.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-8.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-9.jpg",
+      "/images/portfolio/daotao-giang-vien-thalic-10.jpg",
     ],
   },
   {
@@ -429,6 +532,14 @@ export const portfolio: PortfolioItem[] = [
       "/images/portfolio/daotao-bien-tap-radio-5.jpg",
       "/images/portfolio/daotao-bien-tap-radio-4.jpg",
     ],
+  },
+  {
+    category: "dao-tao",
+    title: "Diễn giả về nghề nói — Livestream, Trường Cao đẳng Kinh tế TP.HCM (HCE)",
+    meta: "Diễn giả",
+    description: "Diễn giả chia sẻ về nghề nói và livestream tại Trường Cao đẳng Kinh tế TP.HCM (HCE).",
+    image: "/images/portfolio/dao-tao-dien-gia-nghe-livestream-hce.jpg",
+    images: ["/images/portfolio/dao-tao-dien-gia-nghe-livestream-hce.jpg"],
   },
   {
     category: "livestream",
@@ -578,7 +689,14 @@ export const partners = [
 
 // Khi có logo chính thức: bỏ file vào public/images/partners/ rồi khai báo ở đây,
 // ví dụ: "Zalo": "/images/partners/zalo.png". Đối tác chưa có logo sẽ hiện bằng chữ.
-export const partnerLogos: Record<string, string> = {};
+export const partnerLogos: Record<string, string> = {
+  Lazada: "/images/partners/lazada.png",
+  Shopee: "/images/partners/shopee.png",
+  "Sony Vietnam": "/images/partners/sony.png",
+  Zalopay: "/images/partners/zalopay.png",
+  "Masan Group": "/images/partners/masan.png",
+  "Nam A Bank": "/images/partners/nam-a-bank.png",
+};
 
 export const navLinks = [
   { href: "#gioi-thieu", label: "Giới thiệu" },
