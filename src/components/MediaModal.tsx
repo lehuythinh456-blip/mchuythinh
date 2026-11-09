@@ -29,10 +29,12 @@ function embedUrls(item: VoiceMedia) {
 
 export default function MediaModal({
   title,
+  subtitle = "Voice Talent",
   media,
   onClose,
 }: {
   title: string;
+  subtitle?: string;
   media: VoiceMedia[];
   onClose: () => void;
 }) {
@@ -62,7 +64,7 @@ export default function MediaModal({
       >
         <div className="flex flex-col gap-0.5">
           <span className="text-sm font-medium text-white">{title}</span>
-          <span className="text-xs text-white/50">Voice Talent</span>
+          <span className="text-xs text-white/50">{subtitle}</span>
         </div>
         <button
           type="button"
